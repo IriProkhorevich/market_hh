@@ -1,0 +1,33 @@
+#docker network create it_nets
+
+version: '3.5'
+services:
+  db:
+    image: 'postgres:15.2'
+    container_name: database
+    volumes:
+      -  ./pgdata:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+    environment:
+      - POSTGRES_DB=data
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=good
+    restart: always
+    
+    
+
+   # $ docker run -d -p 8080:8088 -e "SUPERSET_SECRET_KEY=your_secret_key_here" --name superset apache/superset
+    
+
+
+
+
+
+
+
+
+
+
+
+
